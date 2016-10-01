@@ -13,11 +13,12 @@ public class RedBlackNodeRunner {
         
         /**
          * Tests one parameter constructor.
+         * 'True' denotes a black node, whereas 'false' denotes a red node.
          */
         
-        RedBlackNode node1 = new RedBlackNode("black");
-        RedBlackNode node2 = new RedBlackNode("red");
-        RedBlackNode node3 = new RedBlackNode("red");
+        RedBlackNode<Integer, String> node1 = new RedBlackNode<Integer, String>(true);
+        RedBlackNode<Integer, String> node2 = new RedBlackNode<Integer, String>(false);
+        RedBlackNode<Integer, String> node3 = new RedBlackNode<Integer, String>(false);
         System.out.println("1. Testing one parameter constructor...");
         System.out.println("Left child node should be null: " + node3.getLeft());
         System.out.println("Right child node should be null: " + node3.getRight());
@@ -27,21 +28,21 @@ public class RedBlackNodeRunner {
          * Tests three parameter constructor.
          */
         
-        RedBlackNode node4 = new RedBlackNode("black", node2, node3);
+        RedBlackNode<Integer, String> node4 = new RedBlackNode<Integer, String>(true, null, null);
         
         /**
          * Tests getColor().
          */
         
         System.out.println("2. Testing getColor() and setColor()...");
-        System.out.println("Initialized color should be black: " + node4.getColor());
+        System.out.println("Initialized color should be black ('true'): " + node4.getColor());
         
         /**
          * Tests setColor().
          */
         
         node4.setColor("red");
-        System.out.println("Changed color should now be red: " + node4.getColor());
+        System.out.println("Changed color should now be red ('false'): " + node4.getColor());
         System.out.println();
         
         /**
