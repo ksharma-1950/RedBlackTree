@@ -133,6 +133,7 @@ public class RedBlackTree<K extends Comparable,V> {
 //            recolor();
             // check again
         }
+        return false;
     }
 	
     /**

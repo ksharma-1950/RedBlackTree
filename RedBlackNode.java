@@ -224,7 +224,7 @@ public class RedBlackNode<K extends Comparable,V> implements Comparable<RedBlack
      * @return Requested child node of inputted node.
      */
     
-    public RedBlackNode<K,V> getChild(RedBlackNode<K,V> node, boolean side) {
+    public RedBlackNode<K,V> getChild(boolean side) {
         if (side == true) {
             return getLeft();
         }
